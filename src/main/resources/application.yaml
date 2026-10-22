@@ -1,0 +1,38 @@
+server:
+  port: 8081
+  error:
+    include-message: always
+
+# Configuración de spring
+spring:
+  application:
+    name: Demo_Prueba_1
+
+  # Configuración de Flyway para migraciones
+  flyway:
+    enabled: true
+    baselineVersion: 1
+    locations:
+      - classpath:db/migration
+    sqlMigrationSuffixes: .sql
+    baselineOnMigrate: true
+    sqlMigrationPrefix: V
+    schemas: public
+
+  # CORREGIDO: "datasoruse" -> "datasource"
+  datasource:
+    # CORREGIDO: "jbdc" -> "jdbc"
+    url: jdbc:postgresql://localhost:5432/bbbDemoIntelligent
+    username: postgres
+    # CORREGIDO: "pasword" -> "password"
+    password: 24102006
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    # CORREGIDO: "propieties" -> "properties"
+    properties:
+      hibernate:
+        format_sql: true
