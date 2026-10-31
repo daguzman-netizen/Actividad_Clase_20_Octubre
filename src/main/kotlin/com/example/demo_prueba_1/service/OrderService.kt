@@ -3,8 +3,8 @@ package com.example.demo_prueba_1.service
 import com.example.demo_prueba_1.model.*
 import com.example.demo_prueba_1.repository.OrderRepository
 import com.example.demo_prueba_1.repository.ProductRepository
-import com.fasterxml.jackson.core.type.TypeReference
-import com.fasterxml.jackson.databind.ObjectMapper
+import tools.jackson.core.type.TypeReference
+import tools.jackson.databind.ObjectMapper
 import jakarta.transaction.Transactional
 import org.springframework.http.HttpStatus
 import org.springframework.stereotype.Service
